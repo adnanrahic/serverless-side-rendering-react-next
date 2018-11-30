@@ -18,7 +18,6 @@ functions:
 plugins:
   - serverless-apigw-binary
   - serverless-domain-manager
-  - serverless-offline
 
 custom:
   secrets: ${file(secrets.json)}

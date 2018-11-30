@@ -4,18 +4,18 @@ import Default from '../../layouts/default'
 const meta = { title: 'Dogs title', description: 'Dogs description' }
 
 class DogsPage extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       loading: true,
       dogs: []
-    };
-    this.fetchData = this.fetchData.bind(this);
+    }
+    this.fetchData = this.fetchData.bind(this)
   }
-  async componentDidMount() {
-    await this.fetchData();
+  async componentDidMount () {
+    await this.fetchData()
   }
-  async fetchData() {
+  async fetchData () {
     this.setState({ loading: true })
     const { data } = await axios.get(
       'https://api.thedogapi.com/v1/images/search?size=thumb&limit=10'
@@ -25,7 +25,7 @@ class DogsPage extends React.Component {
       loading: false
     })
   }
-  renderDogList() {
+  renderDogList () {
     return (
       <ul>
         {this.state.dogs.map((dog, key) =>
@@ -36,7 +36,7 @@ class DogsPage extends React.Component {
       </ul>
     )
   }
-  render() {
+  render () {
     return (
       <Default meta={meta}>
         <div>
@@ -48,4 +48,4 @@ class DogsPage extends React.Component {
   }
 }
 
-export default DogsPage;
+export default DogsPage

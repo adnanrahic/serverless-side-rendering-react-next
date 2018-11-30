@@ -1,16 +1,15 @@
 {
   "name": "serverless-side-rendering-react-next",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Sample repo for setting up Next and React on AWS Lambda with the Serverless Framework.",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "deploy": "next build && sls deploy"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Adnan Rahić",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
@@ -18,6 +17,9 @@
     "path-match": "^1.2.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "url": "^0.11.0"
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-http": "^1.6.0",
+    "url": "^0.11.0",
+    "serverless-domain-manager": "^2.6.0"
   }
 }

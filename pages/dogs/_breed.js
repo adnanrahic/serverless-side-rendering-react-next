@@ -6,7 +6,7 @@ class DogBreedPage extends React.Component {
   static getInitialProps ({ query: { breed } }) {
     return { breed }
   }
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       loading: true,
@@ -15,17 +15,17 @@ class DogBreedPage extends React.Component {
     }
     this.fetchData = this.fetchData.bind(this)
   }
-  async componentDidMount() {
+  async componentDidMount () {
     await this.fetchData()
   }
-  async fetchData() {
+  async fetchData () {
     this.setState({ loading: true })
-    const reg = new RegExp(this.props.breed, "g");
+    const reg = new RegExp(this.props.breed, 'g')
 
     const { data } = await axios.get(
       'https://api.thedogapi.com/v1/images/search?size=thumb&has_breeds=true&limit=50'
     )
-    const filteredDogs = data.filter(dog => 
+    const filteredDogs = data.filter(dog =>
       dog.breeds[0]
         .name
         .toLowerCase()
@@ -38,7 +38,7 @@ class DogBreedPage extends React.Component {
       loading: false
     })
   }
-  renderDogList() {
+  renderDogList () {
     return (
       <ul>
         {this.state.dogs.map((dog, key) =>
@@ -49,7 +49,7 @@ class DogBreedPage extends React.Component {
       </ul>
     )
   }
-  render() {
+  render () {
     return (
       <Default meta={this.state.meta}>
         <div>
@@ -61,4 +61,4 @@ class DogBreedPage extends React.Component {
   }
 }
 
-export default DogBreedPage;
+export default DogBreedPage

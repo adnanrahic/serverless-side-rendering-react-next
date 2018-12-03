@@ -1,6 +1,9 @@
 import React from 'react'
 import Default from '../layouts/default'
-import axios from 'axios'
+// import axios from 'axios'
+// import { fetch } from 'whatwg-fetch'
+import fetchPonyfill from 'fetch-ponyfill'
+const { fetch } = fetchPonyfill()
 const meta = { title: 'Index title', description: 'Index description' }
 
 class IndexPage extends React.Component {
@@ -17,9 +20,9 @@ class IndexPage extends React.Component {
   }
   async fetchData () {
     this.setState({ loading: true })
-    const { data } = await axios.get(
+    const data = await fetch(
       'https://api.thedogapi.com/v1/images/search?limit=1'
-    )
+    ).then(response => response.json())
     this.setState({
       dog: data[0],
       loading: false

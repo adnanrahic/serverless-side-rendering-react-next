@@ -8,6 +8,9 @@ export default () => (
         <Link href='/'>Home</Link>
       </li>
       <li>
+        <Link href='/graph'>Graph</Link>
+      </li>
+      <li>
         <Link href='/dogs'>Dogs</Link>
       </li>
       <li>

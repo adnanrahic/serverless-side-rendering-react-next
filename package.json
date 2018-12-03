@@ -11,15 +11,23 @@
   "author": "Adnan Rahić",
   "license": "MIT",
   "dependencies": {
+    "@cubejs-client/core": "^0.1.4",
+    "@cubejs-client/react": "^0.1.4",
     "axios": "^0.18.0",
+    "es6-promise": "^4.2.5",
     "express": "^4.16.4",
+    "fetch-ponyfill": "^6.0.2",
+    "isomorphic-fetch": "^2.2.1",
     "next": "^7.0.2",
+    "node-fetch": "^2.3.0",
     "path-match": "^1.2.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "recharts": "^1.4.1",
     "serverless-apigw-binary": "^0.4.4",
+    "serverless-domain-manager": "^2.6.0",
     "serverless-http": "^1.6.0",
     "url": "^0.11.0",
-    "serverless-domain-manager": "^2.6.0"
+    "whatwg-fetch": "^3.0.0"
   }
 }

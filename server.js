@@ -11,6 +11,7 @@ const server = express()
 const route = pathMatch()
 server.use('/_next', express.static(path.join(__dirname, '.next')))
 server.get('/', (req, res) => app.render(req, res, '/'))
+server.get('/graph', (req, res) => app.render(req, res, '/graph'))
 server.get('/dogs', (req, res) => app.render(req, res, '/dogs'))
 server.get('/dogs/:breed', (req, res) => {
   const params = route('/dogs/:breed')(parse(req.url).pathname)

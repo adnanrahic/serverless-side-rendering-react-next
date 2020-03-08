@@ -11,7 +11,7 @@
   "author": "Adnan Rahić",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "express": "^4.16.4",
     "next": "^7.0.2",
     "path-match": "^1.2.4",
